@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Car Leasing Calculator</title>
+
+</head>
+<body>
+    <form>
+        <h1>Car Leasing Calculator</h1>
+
+        <div class="form_row">
+            <div class="form_input">
+                <label>Car Type:</label>
+                <select id="cars" name="cars">
+                    <option value="brandNew">Brand New</option>
+                    <option value="used">Used</option>
+                </select>
+            </div>
+
+            <div class="form_input">
+                <label>Lease Period:</label>
+                <select id="period" name="period">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                    <option value="60">60</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form_row">
+            <div class="form_input">
+                <label for="carValue">Car Value (10,000 - 200,000):</label>
+                <input type="text" id="carValue" name="carValue">
+                <input type="range" id="carValueRange" name="carValueRange" min="10000" max="200000" step="100">
+            </div>
+
+            <div class="form_input">
+                <label for="downPayment">Down Payment (10%-50%):</label>
+                <input type="text" id="downPayment" name="downPayment">
+                <input type="range" id="downPaymentRange" name="downPaymentRange" min="10" max="50" step="5">
+            </div>
+        </div>
+
+        <hr> <!-- Horizontal line separating top and bottom sections -->
+
+        <h1>Leasing Details</h1>
+
+        <div class="form_row">
+            <div class="form_input half_width">
+                <label>Total Leasing Cost:</label>
+                <span id="totalLeasingCost">value</span>
+            </div>
+
+
+            <div class="form_input half_width">
+                <label>Monthly Installment:</label>
+                <span id="monthlyInstallment">value</span>
+            </div>
+        </div>
+
+
+        <div class="form_row">
+            <div class="form_input half_width">
+                <label>Down Payment:</label>
+                <span id="downPaymentDisplay">value</span>
+            </div>
+
+            <div class="form_input half_width">
+                <label>Interest Rate:</label>
+                <span id="interestRate">value</span>
+            </div>
+        </div>
+    </form>
+<!-- Link app.js -->
+<script src="app.js"></script>
+</body>
+</html>
